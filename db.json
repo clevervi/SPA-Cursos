@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Student User",
+      "email": "student@example.com",
+      "password": "c539e06180376ce53580436ce02d8f760e588828943df4d41e779a1f49615a97",
+      "role": "student"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Introducción a JavaScript",
+      "instructor": "Juan Pérez",
+      "capacity": 4000,
+      "enrolled": [
+        "student@example.com"
+      ],
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Desarrollo Web con React",
+      "instructor": "María García",
+      "capacity": 15,
+      "enrolled": []
+    }
+  ]
+}

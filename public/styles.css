@@ -1,0 +1,279 @@
+body {
+  font-family: 'Inter', sans-serif; /* Usando Inter para una mejor estética */
+  margin: 0; /* Eliminar margen por defecto del body */
+  background-color: #f4f7f6; /* Color de fondo suave */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos generales para el contenedor principal */
+#app {
+  max-width: 960px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #ffffff;
+  border-radius: 12px; /* Esquinas más redondeadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Sombra más pronunciada */
+}
+
+/* Estilos generales */
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 0.8em;
+  text-align: center; /* Centrar títulos */
+  font-weight: 600; /* Fuente un poco más negrita */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 12px; /* Esquinas más redondeadas */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Sombra más suave */
+  padding: 1.8em; /* Más padding */
+  margin-bottom: 1.8em; /* Más margen */
+  transition: box-shadow 0.3s ease-in-out; /* Transición más suave */
+}
+.card:hover {
+  box-shadow: 0 8px 20px rgba(44,62,80,0.12); /* Sombra al pasar el ratón */
+}
+
+button, input[type="submit"] {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Más redondeado */
+  padding: 0.8em 1.8em; /* Más padding */
+  font-size: 1.05em; /* Fuente ligeramente más grande */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  display: block; /* Ocupar todo el ancho */
+  width: 100%; /* Ocupar todo el ancho */
+  box-sizing: border-box; /* Incluir padding y border en el ancho */
+  margin-top: 1em; /* Margen superior para botones */
+}
+button:hover, input[type="submit"]:hover {
+  background: #217dbb;
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+button:active {
+  transform: translateY(0); /* Vuelve a la posición original al hacer clic */
+}
+
+input, select, textarea {
+  border: 1px solid #dcdcdc; /* Borde más claro */
+  border-radius: 8px; /* Más redondeado */
+  padding: 0.7em 1em; /* Más padding */
+  font-size: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #3498db; /* Resaltar borde al enfocar */
+  outline: none; /* Eliminar el contorno por defecto */
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Sombra al enfocar */
+}
+
+form {
+  margin-bottom: 2em;
+  padding: 1.5em;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+label {
+  font-weight: 600; /* Más negrita */
+  margin-bottom: 0.5em;
+  display: block;
+  color: #555;
+}
+
+nav {
+  background: linear-gradient(to right, #3498db, #2980b9); /* Gradiente corregido */
+  padding: 1.2em; /* Más padding */
+  border-radius: 10px; /* Más redondeado */
+  margin-bottom: 2.5em;
+  display: flex; /* Para alinear elementos */
+  justify-content: center; /* Centrar enlaces */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.2em; /* Espaciado entre enlaces */
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+  padding: 0.3em 0; /* Padding para el hover */
+}
+nav a:hover {
+  color: #ecf0f1; /* Color más claro al pasar el ratón */
+  text-decoration: underline;
+  transform: translateY(-1px); /* Ligero efecto de elevación */
+}
+
+.alert {
+  background: #ffe0e0;
+  color: #c0392b;
+  border: 1px solid #e74c3c;
+  padding: 1em;
+  border-radius: 8px; /* Más redondeado */
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.success {
+  background: #e0ffe0;
+  color: #27ae60;
+  border: 1px solid #2ecc71;
+  padding: 1em;
+  border-radius: 8px; /* Más redondeado */
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Estilos para el login y register */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh; /* Ocupar más altura de la ventana */
+  background-color: #e9eff3; /* Fondo suave para el contenedor de login */
+  padding: 2em;
+  border-radius: 12px;
+}
+
+.login-form {
+  background: #fff;
+  padding: 2.5em 3em; /* Más padding */
+  border-radius: 12px; /* Más redondeado */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Sombra más intensa */
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para el formulario */
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em; /* Espaciado entre elementos */
+}
+
+.login-form h2 {
+  margin-bottom: 1.5em;
+  color: #34495e;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="text"] {
+  width: 100%;
+  padding: 0.8em 1em;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+}
+
+.login-form button {
+  margin-top: 1.5em;
+  font-weight: 600;
+}
+
+.login-form a {
+  text-align: center;
+  color: #3498db;
+  text-decoration: none;
+  margin-top: 1em;
+  transition: color 0.2s;
+}
+
+.login-form a:hover {
+  color: #217dbb;
+  text-decoration: underline;
+}
+
+/* Estilos para la lista de cursos */
+.course-list {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.course-list li span {
+  flex-grow: 1; /* Permite que el texto ocupe el espacio disponible */
+  margin-right: 1em;
+  color: #444;
+}
+
+.course-list li button {
+  width: auto; /* Ancho automático para botones de acción */
+  margin-left: 0.8em;
+  padding: 0.6em 1.2em;
+  font-size: 0.9em;
+  border-radius: 6px;
+}
+
+.enroll-btn {
+  background-color: #2ecc71; /* Verde para inscripciones */
+}
+.enroll-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Estilos para el botón de logout */
+#out {
+  background-color: #e74c3c; /* Rojo para salir */
+  width: auto;
+  margin: 1em auto 2em; /* Centrar y dar margen */
+  display: block;
+  padding: 0.7em 1.5em;
+  font-size: 0.95em;
+}
+#out:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #app {
+    margin: 1em;
+    padding: 1em;
+  }
+  .login-form {
+    padding: 2em;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 0.5em 0;
+  }
+  .course-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .course-list li button {
+    margin-top: 0.8em;
+    width: 100%;
+  }
+}
