@@ -65,7 +65,7 @@ Sigue estos pasos para configurar el proyecto localmente:
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/spa-cursos.git
+   git clone https://github.com/clevervi/SPA-Cursos
    cd spa-cursos
    ```
 
